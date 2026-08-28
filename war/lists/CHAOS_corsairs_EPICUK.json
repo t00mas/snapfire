@@ -1,9 +1,9 @@
 {
 	"id":"Red Corsairs",
-	"version":"v210617",
+	"version":"v280726",
 	"by":"Kyussinchains, last update 2017-07-11",
 	"notes":["You may only include Brass Scorpion, Silver Tower, Blight Drone and Daemon Knight formations if the force also includes at least one Cult Marine formation or upgrade dedicated to the appropriate chaos power'",
-	"Formations deploying by drop pod or Rhino must take just enough to transport the entire formation.",
+	"Formations deploying by Rhino must take just enough to transport the entire formation.",
 	"Add one free Lesser Daemon to Daemon pool per Daemonic Pact"],
 	"sections":[
 		{"name":"Daemon Pool", "formations": [
@@ -11,11 +11,11 @@
 		]},
 		{"name":"Red Corsairs Core Formations", "formations": [
 			{ "id":501, "name":"Hounds Squadron", "pts":300, "units":"8 Chaos Space Marine Bike units", "upgrades":[13,14] },
-			{ "id":502, "name":"Terminator Retinue", "pts":100	, "units":"", "upgrades":[50,15,16,19,22,13,28,14,35] },
-			{ "id":503, "name":"Renegade Warband", "pts":275, "upgrades":[13,14,15,16,17,18,19,20,22,28,35] }
+			{ "id":502, "name":"Terminator Retinue", "pts":35	, "units":"", "upgrades":[50,15,16,19,80,81,82,83,22,13,28,14,35] },
+			{ "id":503, "name":"Renegade Warband", "pts":275, "upgrades":[13,14,15,16,17,18,19,80,81,82,20,22,28,35] }
 		]},
 		{"name":"Red Corsairs Support Formatons", "formations": [
-			{ "id":510, "name":"Armoured Company", "pts":0, "upgrades":[51,19,18,22,28] },
+			{ "id":510, "name":"Armoured Company", "pts":-25, "upgrades":[51,19,18,22,28] },
 			{ "id":511, "name":"Spaceship", "pts":0},
 			{ "id":512, "name":"Chaos Thunderhawk", "units":"1 Chaos Thunderhawk Gunship", "pts":200},
 			{ "id":513, "name":"Chosen", "pts":200, "upgrades":[15,17,13] },
@@ -42,9 +42,13 @@
 		{ "id":14, "name":"Icon Bearer", "pts":25 },
 		{ "id":15, "name":"Chaos Champion", "pts":50 },
 		{ "id":16, "name":"Chaos Dreadnought", "pts":50 },
-		{ "id":17, "name":"Chaos Drop Pod", "pts":10 },
+		{ "id":17, "name":"Transport formation in Chaos Drop Pods", "pts":50 },
 		{ "id":18, "name":"Chaos Hunter", "pts":50 },
 		{ "id":19, "name":"Chaos Land Raider", "pts":75 },
+		{ "id":80, "name":"2 Chaos Land Raiders", "pts":125 },
+		{ "id":81, "name":"3 Chaos Land Raiders", "pts":200 },
+		{ "id":82, "name":"4 Chaos Land Raiders", "pts":250 },
+		{ "id":83, "name":"4 Chaos Land Raiders (Terminator bespoke option)", "pts":200 },
 		{ "id":20, "name":"Chaos Rhino", "pts":10 },
 		
 		{ "id":22, "name":"Chaos Vindicator", "pts":35 },
@@ -62,14 +66,14 @@
 		{ "id":28, "name":"Defiler", "pts":75 },
 		{ "id":35, "name":"Obliterators", "pts":75 },
 
-		{ "id":50, "name":"Terminator unit", "pts":50 },
+		{ "id":50, "name":"Terminator unit", "pts":60 },
 		{ "id":51, "name":"Chaos Predator", "pts":50 },
 		{ "id":52, "name":"Chaos Strike Cruiser", "pts":200 },
 		{ "id":53, "name":"Chaos Battle Barge", "pts":350 },
 		{ "id":54, "name":"Raptor Unit", "pts":35 },
 		
 		{ "id":60, "name":"6 Chosen units", "pts":0 },
-		{ "id":61, "name":"4 Chosen units, 2 Chaos Rhinos", "pts":0 },
+		{ "id":61, "name":"4 Chosen units, 2 Chaos Rhinos", "pts":-25 },
 
 		{ "id":90, "name":"Chaos Lord", "pts":0 },
 		{ "id":91, "name":"Sorceror Lord", "pts":0 },
@@ -92,11 +96,13 @@
 		{"min":1, "max":1, "from":[23,24,25,26,27,36,37,38,39,40], "appliesTo":[503]},
 
 		{"max":1, "from":[13]},
+		{"max":1, "from":[17]},
 		{"max":1, "from":[14]},
 		{"max":1, "from":[15]},
 		{"max":3, "from":[16]},
 		{"max":1, "from":[18]},
-		{"max":4, "from":[19], "appliesTo":[502,503]},
+		{"max":1, "from":[19,80,81,82], "appliesTo":[502,503]},
+		{"max":1, "from":[83], "appliesTo":[502]},
 		{"max":3, "from":[21]},
 		{"max":3, "from":[22]},
 		{"max":1, "from":[23,24,25,26]},
