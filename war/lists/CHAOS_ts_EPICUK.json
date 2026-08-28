@@ -1,18 +1,22 @@
 {
    "id": "Thousand Sons",
-   "version": "Epic UK v070414",
+   "version": "Epic UK v280726",
    "by": "Kyussinchains",
    "notes":["1) If Using Rhinos you must take exactly enough to carry all units in the formation after any upgrades have been added, to a maximum of 5. 2) Rhinos count towards the upgrade allowance of a formation"],
    "sections": [
       {"name": "CORE", "formations": [
 			{"id": 501, "name": "Thousand Sons Retinue", "pts": 275, "upgrades": [22,53,64,65,66,60,57,67,68,62]},
+			{"id": 502, "name": "Tzaangor Herd", "pts": 200, "units": "10 Tzaangor", "upgrades": [56]},
 			{"id": 552, "name": "Daemon Pool", "pts": 0, "upgrades": [50,51]}
 	]},
+	{"name": "ELITE", "formations": [
+            {"id": 503, "name": "Terminators", "pts": 350, "units": "4 Terminators", "upgrades": [22,63,70,71,53,64,65,66,56,60,57,67,68,84]},
+            {"id": 507, "name": "Spawn Horde", "pts": 225, "units": "5 Spawn",  "upgrades": []}
+         ]}, 
       {"name": "SUPPORT", "formations": [
-			{"id": 503, "name": "Terminators", "pts": 400, "units": "4 Terminators", "upgrades": [22,63,70,71,53,64,65,66,56,60,57,67,68]},
 			{"id": 506, "name": "Defiler Pack", "pts": 275, "units": "4 Defilers",  "upgrades": [63]},
 			{"id": 508, "name": "Disc Riders", "pts": 275, "units": "8 Disc Riders", "upgrades": [56,60]},
-			{"id": 509, "name": "Armoured Company", "pts": 0, "upgrades": [29,30,57,67,68,28,72,73]},
+			{"id": 509, "name": "Armoured Company", "pts": -25, "upgrades": [29,30,57,67,68,28,72,73]},
 			{"id": 510, "name": "Silver Towers", "pts": 300, "units": "4 Silver Towers", "upgrades": []}
       ]},
       {"name": "CHAOS TITANS", "formations": [
@@ -31,11 +35,11 @@
       {"id": 34, "name": "5 Thousand Sons", "pts": 0},
       {"id": 35, "name": "8 Thousand Sons", "pts": 175},
       {"id": 53, "name": "Chaos Land Raider", "pts": 75},
-	  {"id": 64, "name": "2 Chaos Land Raiders", "pts": 150},
-	  {"id": 65, "name": "3 Chaos Land Raiders", "pts": 225},
-	  {"id": 66, "name": "4 Chaos Land Raiders", "pts": 300},
-      {"id": 60, "name": "Icon Bearer", "pts": 25},
-      
+	  {"id": 64, "name": "2 Chaos Land Raiders", "pts": 125},
+	  {"id": 65, "name": "3 Chaos Land Raiders", "pts": 200},
+	  {"id": 66, "name": "4 Chaos Land Raiders", "pts": 250},
+      {"id": 60, "name": "Icon Bearer", "pts": 50},
+      {"id": 84, "name": "Teleport", "pts": 50},
       {"id": 57, "name": "Thousand Sons Defiler", "pts": 75},
 	  {"id": 67, "name": "2 Thousand Sons Defilers", "pts": 150},
 	  {"id": 68, "name": "3 Thousand Sons Defilers", "pts": 225},
@@ -64,7 +68,8 @@
       {"max": 1, "from": [552]},
       {"max": 1, "name": "Spacecraft", "from": [533,534]},
       {"maxPercent": 33, "name": "War Engines & Allies", "from": [520,521,522,530,531,533,534]},
-      {"max": 2, "name": "Support Formations", "from": [503,506,508,509,510], "forEach": [501], "name2": "Retinue"}
+      {"max": 2, "name": "Support Formations", "from": [506,508,509,510], "forEach": [501,502], "name2": "Retinue"},
+      {"max": 1, "name": "Elite Formations", "from": [503,507], "forEach": [501,502], "name2": "Retinue"}
    ],
    "upgradeConstraints": [
       {"max": 1, "min": 1, "from": [34,35], "appliesTo": [501]},
@@ -84,7 +89,8 @@
       {"max": 1, "perArmy": true, "from": [21]},
       {"max": 1, "min": 1, "from": [18,19,20,21], "appliesTo": [503,508]},
       {"max": 3, "from": [63], "appliesTo": [503,506]},
-      {"max": 1, "from": [56], "appliesTo": [503,508]},
+      {"max": 1, "from": [56], "appliesTo": [502,503,508]},
+      {"max": 1, "from": [84], "appliesTo": [503]},
       {"max": 9, "min": 4, "from": [29,30], "appliesTo": [509]},
       {"max": 1, "from": [39], "appliesTo": [531]}
    ]
