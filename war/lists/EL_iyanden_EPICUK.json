@@ -72,7 +72,7 @@
       {"max": 1, "from": [517]},
       {"maxPercent": 33, "name": "War Engines & Allies", "from": [515,516,517,518,519,520,521,522]},
       {"max": 2, "name": "Troupes", "from": [500,501,502,503,504,505,530,550,551], "forEach": [510,511,512], "name2": "Iyanden Host"},
-      {"max": 1, "name": "living unit", "from":[500,511,512,550], "forEach":[510,551], "name2": "Spirit Formation"} 
+      {"max": 1, "name": "living unit", "from":[500,502,511,512,550], "forEach":[510,551], "name2": "Spirit Formation"}
    ],
    "upgradeConstraints": [
       {"max": 1, "perArmy": true, "from": [62]},
